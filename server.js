@@ -6,13 +6,13 @@ var methodOverride = require('method-override');
 var app = express();
 
 // Serve static content for the app from the 'public' directory
-app.use(express.static('public'));
+app.use(express.static(process.cwd() + '/public'));
 
 // parse application
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // Method Override (via: 14.3 Cats App video)
 app.use(methodOverride('_method'));
@@ -28,7 +28,7 @@ var routes = require('./controllers/burgers_controller.js');
 
 app.use('/', routes);
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3306;
 app.listen(PORT, function() {
   console.log('App listening at localhost: ' + PORT);
 });
