@@ -12,19 +12,13 @@ function printQuestionMarks(num) {
 }
 
 // Helper function to convert object key/value pair to SQL syntax
+// Watched 14.3 Cats App Video to help with this 
 function objToSql(ob) {
   var arr = [];
 
-  // Loop through the keys and push the key/value as a string to arr
   for (var key in ob) {
-    var value = ob[key];
-
-    //Check to skip hidden properties
-    if (Object.hasOwnProperty.call(ob, key)) {
-      if (typeof value === 'string' && value.indexOf(' ') >= 0) {
-        value = "'" + value + "'";
-      }
-      arr.push(key + '=' + value);
+    if (ob.hasOwnProperty(key)) {
+      arr.push(key + '=' + ob[key]);
     }
   }
   return arr.toString();
@@ -32,16 +26,16 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions (17-MVC Exercise)
 var orm = {
-  selectAll: function(tableInput, cb) {
+  all: function(tableInput, cb) {
     var queryString = 'SELECT * FROM ' + tableInput + ';';
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-      cd(result);
+      cb(result);
     });
   },
-  insertOne: function(table, cols, vals, cd) {
+  create: function(table, cols, vals, cd) {
     var queryString = 'INSERT INTO ' + table;
 
     queryString += ' (';
@@ -57,10 +51,10 @@ var orm = {
       if (err) {
         throw err;
       }
-      cd(result);
+      cb(result);
     });
   },
-  updateOne: function(table, objColVals, condition, cd) {
+  update: function(table, objColVals, condition, cd) {
     var queryString = 'UPDATE ' + table;
 
     queryString += ' SET ';
@@ -74,7 +68,7 @@ var orm = {
       if (err) {
         throw err;
       }
-      cd(result);
+      cb(result);
     });
   }
 };
