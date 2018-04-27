@@ -1,0 +1,9 @@
+.burger-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h1, h3 {
+    font-family: 'Do Hyeon', sans-serif;
+}
