@@ -1,9 +1,31 @@
+body {
+    background-color: #eee;
+    /* border-top: 6px solid #000; */
+}
+
 .burger-container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-h1, h3 {
-    font-family: 'Do Hyeon', sans-serif;
+.burger-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.burger-img {
+    width: 200px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
