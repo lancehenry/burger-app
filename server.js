@@ -1,4 +1,5 @@
 // Dependencies
+// Watched the catsApp video to finish this project! Got it working!
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -9,7 +10,7 @@ var app = express();
 app.use(express.static(process.cwd() + '/public'));
 
 // parse application
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
 app.use(bodyParser.json());

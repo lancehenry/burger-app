@@ -26,6 +26,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions (17-MVC Exercise)
 var orm = {
+  // Select all from the database
   all: function(tableInput, cb) {
     var queryString = 'SELECT * FROM ' + tableInput + ';';
     connection.query(queryString, function(err, result) {
@@ -35,7 +36,8 @@ var orm = {
       cb(result);
     });
   },
-  create: function(table, cols, vals, cd) {
+  // Create new burger in database to devour
+  create: function(table, cols, vals, cb) {
     var queryString = 'INSERT INTO ' + table;
 
     queryString += ' (';
@@ -54,7 +56,8 @@ var orm = {
       cb(result);
     });
   },
-  update: function(table, objColVals, condition, cd) {
+  // Update existing burger in database
+  update: function(table, objColVals, condition, cb) {
     var queryString = 'UPDATE ' + table;
 
     queryString += ' SET ';
