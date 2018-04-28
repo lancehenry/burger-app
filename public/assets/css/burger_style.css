@@ -16,6 +16,7 @@ body {
   background-color: #eee;
   height: 75%;
   min-height: 600px;
+  padding-bottom: 100px;
 }
 
 .burger-header {
@@ -54,6 +55,25 @@ hr {
   margin-bottom: 0;
 }
 
+.btn-circle {
+  background-color: #11aacc;
+  border: none;
+  border-radius: 0;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.btn-circle:focus,
+.btn-circle:active:focus,
+.btn-circle:hover {
+  background-color: #1096b4;
+  border: none;
+  border-radius: 0;
+  border-radius: 0;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
 .btn-style {
   background-color: #11aacc;
   border: none;
@@ -75,15 +95,21 @@ hr {
 }
 
 .li-line {
-    width: 75%;
-    margin-top: -15px;
-    margin-bottom: 30px;
+  width: 75%;
+  margin-top: -15px;
+  margin-bottom: 30px;
 }
 
 li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   list-style-type: none;
+}
+
+.list-inline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .li-styles {
@@ -93,10 +119,10 @@ li {
 }
 
 .fa-check-circle {
-    color: #11aacc;
-    margin-right: 10px;
+  color: #11aacc;
+  margin-right: 10px;
 }
 
 .burger-nm {
-    font-weight: 600;
+  font-weight: 600;
 }
