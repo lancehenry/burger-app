@@ -14,7 +14,7 @@
 		<!-- Add a burger input field -->
 		<div class='row'>
 			<div class='col-md-12 text-center'>
-				<h4>Add Your Burger</h4>
+				<h4>ADD YOUR BURGER</h4>
 
 				<form class='create-form' action='/' method='POST'>
 					
@@ -32,8 +32,8 @@
 			<!-- Burgers available to devour -->
 			<div class="col-sm">
 				<br>
-				<h5>Eat These Burgers!</h5>
-
+				<h5>EAT 'EM</h5>
+				<hr class='li-line'>
 				{{#each burgers}} {{#unless this.devoured}}
 				<li>
 					{{this.id}}. {{this.burger_name}}
@@ -51,8 +51,8 @@
 			<!-- Devoured Burgers -->
 			<div class="col-sm">
 				<br>
-				<h5>Devoured Them!</h5>
-
+				<h5>DEVOURED 'EM</h5>
+				<hr class='li-line'>
 				{{#each burgers}} {{#if this.devoured}}
 				<li class='li-styles'>
 					<i class="fas fa-check-circle"></i><span class='burger-nm'>{{this.burger_name}}</span> (ID: {{this.id}})

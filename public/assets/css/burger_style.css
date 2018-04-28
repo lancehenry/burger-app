@@ -38,6 +38,8 @@ h1 {
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 h5 {
@@ -70,6 +72,12 @@ hr {
   padding-left: 18px;
   padding-right: 18px;
   margin-left: 10px;
+}
+
+.li-line {
+    width: 75%;
+    margin-top: -15px;
+    margin-bottom: 30px;
 }
 
 li {
