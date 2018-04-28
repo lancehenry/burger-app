@@ -1,3 +1,5 @@
+/* Body, Header Styles
+--------------------------------------------------- */
 body {
   background-color: #e9e9e9;
 }
@@ -29,6 +31,8 @@ body {
   width: 200px;
 }
 
+/* Font Styling
+--------------------------------------------------- */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -55,6 +59,8 @@ hr {
   margin-bottom: 0;
 }
 
+/* Button Styles
+--------------------------------------------------- */
 .btn-circle {
   background-color: #11aacc;
   border: none;
@@ -94,6 +100,8 @@ hr {
   margin-left: 10px;
 }
 
+/* List Item Styles
+--------------------------------------------------- */
 .li-line {
   width: 75%;
   margin-top: -15px;
