@@ -17,7 +17,7 @@ CREATE TABLE burgers (
     burger_name VARCHAR(255) NOT NULL,
 
     -- A boolean column called 'devoured' cannot contain null
-    devoured BOOLEAN NOT NULL,
+    devoured BOOLEAN DEFAULT false,
 
     -- Sets id as this table's primary key
     PRIMARY KEY (id)
