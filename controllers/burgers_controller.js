@@ -30,12 +30,13 @@ router.put('/burgers/:id', function(req, res) {
 
   burger.update(
     {
-      devoured: true
+      devoured: req.body.devoured
     },
     condition,
     function() {
       res.redirect('/');
-    });
+    }
+  );
 });
 
 // Export routes for server.js to use
